@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { bookReducer } from './Book/bookReducer';
-import { filterReducer } from "./Filter/filterReduce";
+import { bookReducer } from './Book/bookSlice';
+import { filterReducer } from "./Filter/filterSlice";
 
 export const reducer = combineReducers({ 
     filter: filterReducer,  

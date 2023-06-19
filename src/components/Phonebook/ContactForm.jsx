@@ -3,7 +3,7 @@ import css from './Phonebook.module.css';
 
 function ContactForm({ onSubmit }) {
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setPhone] = useState('');
 
   const handleInputChange = e => {
     const { name, value } = e.currentTarget;
@@ -11,8 +11,8 @@ function ContactForm({ onSubmit }) {
       case 'name':
         setName(value);
         break;
-      case 'number':
-        setNumber(value);
+      case 'phone':
+        setPhone(value);
         break;
       default:
         return;
@@ -23,12 +23,11 @@ function ContactForm({ onSubmit }) {
     e.preventDefault();
     const contact = {
       name,
-      number,
+      phone,
     };
-    console.log(contact);
     onSubmit(contact);
     setName('');
-    setNumber('');
+    setPhone('');
   };
 
   return (
@@ -52,11 +51,11 @@ function ContactForm({ onSubmit }) {
           Number
           <input
             type="tel"
-            name="number"
+            name="phone"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
-            value={number}
+            value={phone}
             onChange={e => {
               handleInputChange(e);
             }}

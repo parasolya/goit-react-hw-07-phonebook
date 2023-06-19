@@ -13,21 +13,20 @@ ul {
   box-shadow: 10px 5px 5px rgb(249, 248, 158);
  
   padding-left: 10px;
-  margin-right: 40px;
   margin-left: auto;
 }
 .contacts__item {
     display: flex;
     align-items: center;
 
-  width: 400px;
+  width: 500px;
   gap: 10px;
 }
 
 .phonebook__section {
     color: #fcfcfc;
     background-color: #333334; 
-    width: 500px;
+    width: 600px;
     margin: 40px;
     /* flex: auto; */
     align-items: center;
@@ -37,6 +36,10 @@ ul {
     box-shadow: 10px 5px 5px rgb(249, 248, 158);
     gap: 20px;
     padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
   }
 
   .phonebook__form {
@@ -58,4 +61,11 @@ ul {
   margin-left: auto;
   margin-top: auto;
   margin-bottom: 0px;
+}
+.Loader {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
 }

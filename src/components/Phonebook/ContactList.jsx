@@ -11,7 +11,7 @@ const ContactList = ({ contacts, onDelete }) => {
           return (
               <li className={css.contacts__item} key={el.id}>
             <p>
-              {el.name}: <span>{el.number}</span>
+              {el.name}: <span>{el.phone}</span>
             </p>
             <button className={css.contacts__btn} onClick={() => onDelete(el.id)}>delete</button>
             </li>
